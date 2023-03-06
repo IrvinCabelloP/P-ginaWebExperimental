@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Está página te enseña a dibujar">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+        <title>Pokedex</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 70%;">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">IrvinC</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#inicioPagina">Inicio</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#JSON">Pokedex JSON</a>
+                          </li>
+                        </ul>
+                        <form class="d-flex">
+                          <input class="form-control mb-3" type="search" placeholder="Search" aria-label="Search" style="margin-right: 5px;">
+                          <button class="btn btn-outline-light btn-sm" type="submit">Buscar</button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
+            </nav>
+            <div class="container">
+              <div class="text-center mb-5">
+                  <h1 class="fw-bolder">Welcome to Irvin's Blog!<span class="badge bg-secondary">NEW</span></h1>
+                  <p class="lead mb-0">Hello Word. Hola Mundo para los que no sepan inglés.</p>
+              </div>
+          </div>
+        </header>
+        <main>
+          <section>
+            <h2>Carrusel</h2>
+              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1648713690352-42c78e77dce5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="Edificio">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h6 style="color: aliceblue;">PRIMERA</h6>
+                      <p style="color: aliceblue;">Foto</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1648726131506-c54b9e3bc46a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="Foto chida">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h6 style="color: aliceblue;">SEGUNDA</h6>
+                      <p style="color: aliceblue;">Foto</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1648612732829-a1b702f9e7e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="Bosque">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h6 style="color: aliceblue;">TERCERA</h6>
+                      <p style="color: aliceblue;">Foto</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </section>
+          <section>
+            <h2 id="JSON">POKEDEX</h2>
+            <input type="text" id="search" placeholder="Nombre o ID">
+            <div><h3 id="pokemon" style="font-size: xxx-large">Pokemon</h3></div>
+            <div><h5 id="salud">hp</h5>
+            <div class="window mb-3">
+              <img id="image" src="" alt="" style="height: 30%; width: 30%;">
+            </div>
+            <div><h4 id="potipo" style="font-size: xxx-large">Tipo</h4></div>
+            <h3 id="info1" class="window mb-1">Tipo1</h3>
+            <h3 id="info2" class="window mb-3">Tipo2</h3>
+            <div class="container mb-5">
+              <table class="table table-bodered table-striped table-light" id="tablap">
+                <thead>
+                  <tr class="table-dark">
+                    <th>#</th>
+                    <th>Habilidad 1</th>
+                    <th>Habilidad 2</th>
+                    <th>Habilidad 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col" id="pokemonid"></th>
+                    <th scope="col" id="habilidad1"></th>
+                    <th scope="col" id="habilidad2"></th>
+                    <th scope="col" id="habilidad3"></th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+    </body>
+  <script src="./jason.js"></script>
+</html>
